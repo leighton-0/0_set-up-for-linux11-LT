@@ -20,7 +20,8 @@ apt install git -y
 apt install tmux -y
 apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
 gem install wpscan -y                                                               #install wpscan
-wget https://github.yanqishui.work/S1lkys/Auto_wpscan/raw/master/auto_wpscan.sh     #install auto_wpscan
+wget https://raw.githubusercontent.com/leighton-0/1_auto_wpscan/master/auto_wpscan.sh   #install auto_wpscan
+# wget https://github.yanqishui.work/S1lkys/Auto_wpscan/raw/master/auto_wpscan.sh     #install auto_wpscan
 wget https://raw.githubusercontent.com/S1lkys/Auto_wpscan/master/wp-links           #uploads trial wordpress list (70)
 apt install nmap -y
 wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt  #upload my password list
