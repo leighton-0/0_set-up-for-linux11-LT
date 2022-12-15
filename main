@@ -1,12 +1,11 @@
 #!/bin/bash
 
 ######################################################################
-##               WPScan Set Up Script                             ##
-#######################################################################
-# To loginto a droplet use ==>> ssh -i myssh1 root@ipv4
-#  example alias do3='ssh -i myssh1 root@ipv4'" >> .bashrc
+##              Set Up Script for Linux 11 LT                       ##
+######################################################################
+# 
 
-s=2                  # Slows scritpt down so you can see whats going on
+s=4                  # Slows script down so you can see whats going on
 
 printf '\n============================================================\n'
 printf '[+] Updating System\n'
@@ -20,7 +19,6 @@ apt install ruby -y
 apt install git -y
 apt install tmux -y
 apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
-sleep 5
 gem install wpscan -y                                                               #install wpscan
 wget https://github.yanqishui.work/S1lkys/Auto_wpscan/raw/master/auto_wpscan.sh     #install auto_wpscan
 wget https://raw.githubusercontent.com/S1lkys/Auto_wpscan/master/wp-links           #uploads trial wordpress list (70)
@@ -48,7 +46,7 @@ printf '============================================================\n\n'
 sleep $s
 
 
-# Back-up original .bashrc incase I Fuck it up
+# Back-up original .bashrc in case I Fuck it up
 if [ ! -f ~/.bashrc.bak ]; then                                                      #Check if bashrc.bak has already been copied. If yes then skip
     cp /root/.bashrc /root/.bashrc.bak                                               # bak Up bashrc incase I fuck it up
 
@@ -118,5 +116,35 @@ apt install nordvpn
 # nordvpn status
 comment
 
+if [ ! -d ~/reconftw ]; then    #Check it Reconftw already exists. If no then loads reconftw program
+
+    printf '\n============================================================\n'
+    printf '\n[+] reconftw doesnt exists installing reconftw\n'
+    printf '============================================================\n\n'
+
+    sleep $s
+    git clone https://github.com/six2dez/reconftw
+    cd reconftw/
+    ./install.sh
+else
+
+  printf '\n============================================================\n'
+  printf '\n[+] reconftw already exists\n'
+  printf '============================================================\n\n'
+
+fi
+sleep $s
+
+
+printf '\n============================================================\n'
+printf '\n[+] upload custom reconftw.cfg and amass config.ini files\n'
+printf '============================================================\n\n'
+
+sleep $s
+rm -r ~/reconftw/reconftw.cfg 2> /dev/null
+wget -P ~/reconftw https://raw.githubusercontent.com/leighton-0/DigitalOcean-ReconFTW-Set-Up/main/reconftw.cfg
+rm -r ~/.config/amass/config.ini 2> /dev/null
+wget -P ~/.config/amass/ https://raw.githubusercontent.com/leighton-0/DigitalOcean-ReconFTW-Set-Up/main/config.ini
+sleep $s
 
 
