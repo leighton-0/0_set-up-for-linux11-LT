@@ -1,5 +1,5 @@
 
-Prepares a standard configuration for Linux 11 on LT
+Prepares a standard configuration for Linux G11 on LT
 
 This Script is based on the repository by BlackLantern https://github.com/blacklanternsecurity/kali-setup-script.
 NEEDS ROOT
