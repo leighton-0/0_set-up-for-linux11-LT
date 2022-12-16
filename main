@@ -1,17 +1,23 @@
 #!/bin/bash
 
 ######################################################################
-##              Set Up Script for Linux 11 LT                       ##
+##              Set Up Script for Debian 11 on Laptop                       ##
 ######################################################################
 # 
 
 s=5                  # Slows script down so you can see whats going on
 
+# make sure we're root
+if [ "$HOME" != "/root" ]
+then
+    printf "Please run while logged in as root\n"
+    exit 1
+fi
+
 printf '\n============================================================\n'
 printf '[+] Updating System\n'
 printf '============================================================\n\n'
-apt update -y
-apt upgrade -y
+apt update -y && apt upgrade -y
 sleep $s
 
 apt install wget -y
@@ -27,6 +33,11 @@ wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.t
 apt install hydra -y                                                                #install Hydra
 apt install whois -y
 apt install dnsutils -y
+apt install flatpak -y
+apt install chrome-gnome-shell -y
+
+<<comment
+Nikto not installing - needs work!
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
@@ -40,28 +51,31 @@ perl nikto.pl
 # to update                     /usr/local/bin/nikto.pl -update
 #to list available plugins      nikto.pl -list-plugins // To list the installed plugins //
 
+comment
+
 printf '\n============================================================\n'
 printf '[+]  Upload standard .bash_aliases & upgrades to .bashrc. \n'
 printf '============================================================\n\n'
 sleep $s
 
-
 # Back-up original .bashrc in case I Fuck it up
 if [ ! -f ~/.bashrc.bak ]; then                                                      #Check if bashrc.bak has already been copied. If yes then skip
     cp /root/.bashrc /root/.bashrc.bak                                               # bak Up bashrc incase I fuck it up
-
                                                                                      # Upload my standard aliases file
 wget https://raw.githubusercontent.com/leighton-0/2_aliases/master/.bash_aliases
-
-                                                                                     #Add pointer to new .bash_aliases
-cat <<"EOF" >>.bashrc
-if [ -f ~/.bash_aliases ]; then
+# Add pointer to new .bash_aliases
+cat <<'EOF' >>.bashrc
+#if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
-fi
+#fi
 EOF
 fi
 
-. .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
+# enable command aliasing
+shopt -s expand_aliases
+
+# source .bashrc & .bash_aliases
+. .bashrc && . .bash_aliases                
 
 
 printf '\n============================================================\n'
