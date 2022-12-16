@@ -96,14 +96,8 @@ printf '\n============================================================\n'
 printf '[+] Installing:\n'
 printf '     - wireless drivers\n'
 printf '     - golang & environment\n'
-printf '     - docker\n'
-printf '     - powershell\n'
 printf '     - terminator\n'
 printf '     - gedit\n'
-printf '     - pip & pipenv\n'
-printf '     - patator\n'
-printf '     - vncsnapshot\n'
-printf '     - zmap\n'
 printf '     - htop\n'
 printf '     - mosh\n'
 printf '     - tmux\n'
@@ -114,24 +108,17 @@ printf '============================================================\n\n'
 apt-get install \
     realtek-rtl88xxau-dkms \
     golang \
-    docker.io \
-    powershell \
     terminator \
     gedit -y \
     python3-dev \
     python3-pip \
-    patator \
     net-tools \
-    vncsnapshot \
-    zmap \
     htop \
     mosh \
     tmux \
     nfs-kernel-server \
     dnsmasq \
     hcxtools \
-    mosh \
-    vim
 python2 -m pip install pipenv
 python3 -m pip install pipenv
 apt-get remove mitmproxy
