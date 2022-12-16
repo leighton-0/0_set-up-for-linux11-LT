@@ -1,2 +1,61 @@
-# set-up
-mnbmbmbbmbmbmbm
+Kali Setup Script
+
+Prepares Kali as a standard configuration
+
+This Script is based on the repository by BlackLantern https://github.com/blacklanternsecurity/kali-setup-script. All credit for the followiinf goes to him
+NOTE STILL IN DEVELOPMENT
+NEEDS ROOT
+
+Load the complete script:-
+curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_2.sh | bash
+
+Load ethers files into wireshark:-
+
+rm -r .config/wireshark/ethers && wget -P /.config/wireshark/ethers https://raw.githubusercontent.com/leighton-0/kali-setup/master/ethers
+
+#wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
+
+Load profile files into wireshark:-
+wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0/kali-setup/profiles
+
+Full feature list:
+
+Enables details logging of terminal sessions
+    Including ALL OUTPUT (saved to ~/Logs)
+Installs the following:
+    Gedit
+    NordVPN
+    Auto MAC spoof on start up
+    Auto Random Host name
+    copy sources.list.d non-kali repositories 
+    Config Terminator to launch in 3 paynes
+    CrackMapExec (from GitHub)
+   ** Above Addided by Leighton**
+    Impacket (from GitHub)
+    Bloodhound (from GitHub)
+    EAPhammer (from GitHub)
+    patator (network brute-force tool)
+    PCredz
+    Gowitness
+    EavesARP
+    bettercap
+    docker
+    Firefox (official non-ESR version)
+    Chromium
+    Sublime Text
+    BoostNote
+    golang (plus environment)
+    zmap
+    LibreOffice
+    htop
+    Remmina
+    gnome-screenshot
+    realtek-rtl88xxau-dkms (ALFA wireless drivers)
+    i3 + XFCE desktop environment (optional)
+Updates system
+Removes gnome-software
+Disables auto-lock
+Enables tap-to-click
+Initializes Metasploit database
+Installs rad BLS wallpaper
+
