@@ -28,8 +28,6 @@ apt install hydra -y                                                            
 apt install whois -y
 apt install dnsutils -y
 
-<<comment
-
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
 printf '============================================================\n\n'
