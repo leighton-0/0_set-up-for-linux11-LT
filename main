@@ -28,6 +28,7 @@ apt install hydra -y                                                            
 apt install whois -y
 apt install dnsutils -y
 
+<<comment
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
@@ -226,3 +227,4 @@ wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/5_Ter
 sleep $s
 
 
+comment
