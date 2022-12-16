@@ -5,23 +5,18 @@ This Script is based on the repository by BlackLantern https://github.com/blackl
 NEEDS ROOT
 
 Load the complete script:-
-curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_2.sh | bash
 
+curl -k -s https://raw.githubusercontent.com/leighton-0/0_set-up-for-linux11-LT/main/main | bash
 
 #wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
 
-
-
 Full feature list:
 
-Enables details logging of terminal sessions
-    Including ALL OUTPUT (saved to ~/Logs)
 Installs the following:
     Gedit
     NordVPN
     Auto MAC spoof on start up
-    Auto Random Host name
-    copy sources.list.d non-kali repositories 
+    Auto Random Host name 
     Config Terminator to launch in 3 paynes
     CrackMapExec (from GitHub)
    ** Above Addided by Leighton**
