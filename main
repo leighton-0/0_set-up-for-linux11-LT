@@ -17,7 +17,6 @@ sleep $s
 apt install wget -y
 apt install ruby -y
 apt install git -y
-apt install tmux -y
 apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
 gem install wpscan -y                                                               #install wpscan
 wget https://raw.githubusercontent.com/leighton-0/1_auto_wpscan/master/auto_wpscan.sh   #install auto_wpscan
@@ -81,7 +80,7 @@ printf '[+] upload functions to directory zz_functions\n'
 printf '============================================================\n\n'
 
 rm -r ~/zz_functions/functions &> /dev/null
-wget -P ~/zz_functions https://raw.githubusercontent.com/leighton-0/Aliases-Bashrc-Scripts-and-Functions/master/functions_2
+wget -P ~/zz_functions https://raw.githubusercontent.com/leighton-0/3_functions/master/functions_2
 sleep $s
 
 printf '\n============================================================\n'
@@ -189,7 +188,7 @@ else
 fi
 sleep $s
 
-
+<< comment
 printf '\n============================================================\n'
 printf '\n[+] upload custom reconftw.cfg and amass config.ini files\n'
 printf '============================================================\n\n'
@@ -200,6 +199,7 @@ wget -P ~/reconftw https://raw.githubusercontent.com/leighton-0/DigitalOcean-Rec
 rm -r ~/.config/amass/config.ini 2> /dev/null
 wget -P ~/.config/amass/ https://raw.githubusercontent.com/leighton-0/DigitalOcean-ReconFTW-Set-Up/main/config.ini
 sleep $s
+comment
 
  printf '\n============================================================\n'
     printf '[+] Auto MAC spoof on start up - assuming wlan0\n'
@@ -221,8 +221,8 @@ sleep $s
     printf '[+] change config file for terminator to 3 pane set up \n'
     printf '============================================================\n\n'
 rm -r .config/terminator/config
-wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
-curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
+wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/5_Terminator_config/main/main
+#curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
 sleep $s
 
 
