@@ -82,6 +82,8 @@ rm -r ~/zz_functions/functions &> /dev/null
 wget -P ~/zz_functions https://raw.githubusercontent.com/leighton-0/3_functions/master/functions_2
 sleep $s
 
+
+<<comment
 printf '\n============================================================\n'
 printf '[+] Install TOR\n'
 printf '============================================================\n\n'
@@ -90,6 +92,8 @@ apt-get install tor
 service tor start
 # use example ==> wpscan --url blog.tld --proxy socks5://127.0.0.1:9050
 #Test TOR working ==> curl -x socks5h://localhost:9050 -s https://check.torproject.org/api/ip
+
+comment
 
 printf '\n============================================================\n'
 printf '[+] Installing:\n'
