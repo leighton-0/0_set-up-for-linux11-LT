@@ -6,7 +6,7 @@ NEEDS ROOT
 
 Load the complete script:-
 
-curl -k -s https://raw.githubusercontent.com/leighton-0/0_set-up-for-linux11-LT/main/main | bash
+curl -k -s https://raw.githubusercontent.com/leighton-0/0_standard-set-up-for-debian11-/main/main | bash
 
 #wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
 
