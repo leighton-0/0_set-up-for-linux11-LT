@@ -13,7 +13,7 @@ printf '============================================================\n\n'
 apt update -y
 apt upgrade -y
 sleep $s
-
+<< comment
 apt install wget -y
 apt install ruby -y
 apt install git -y
@@ -28,6 +28,7 @@ wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.t
 apt install hydra -y                                                                #install Hydra
 apt install whois -y
 apt install dnsutils -y
+comment
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
@@ -119,6 +120,7 @@ apt-get install \
     nfs-kernel-server \
     dnsmasq \
     hcxtools \
+
 python2 -m pip install pipenv
 python3 -m pip install pipenv
 apt-get remove mitmproxy
@@ -135,7 +137,7 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 EOF
-
+<<comment
 printf '\n============================================================\n'
     printf '[+] install NordVPN\n'
     printf '============================================================\n\n'
@@ -144,8 +146,8 @@ apt-get install -y ./nordvpn-release_1.0.0_all.deb
 apt-get update
 apt-get install nordvpn
 sleep $s
+comment
 
-<<comment
 printf '\n============================================================\n'
 printf '[+] install NordVPN\n'
 printf '============================================================\n\n'
@@ -167,7 +169,6 @@ apt install nordvpn
 # nordvpn connect --group Dedicated_IP Germany
 # sleep 10
 # nordvpn status
-comment
 
 if [ ! -d ~/reconftw ]; then    #Check it Reconftw already exists. If no then loads reconftw program
 
