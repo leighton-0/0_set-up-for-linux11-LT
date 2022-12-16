@@ -13,7 +13,7 @@ printf '============================================================\n\n'
 apt update -y
 apt upgrade -y
 sleep $s
-<< comment
+
 apt install wget -y
 apt install ruby -y
 apt install git -y
@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.t
 apt install hydra -y                                                                #install Hydra
 apt install whois -y
 apt install dnsutils -y
-comment
+
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
