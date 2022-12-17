@@ -72,8 +72,8 @@ EOF
 fi
 
 #   copy .bashrc with API keys from andy ssd
-cp /media/a/AndySSD/3_Targets/.bashrc /.bashrc
-
+#   cp /media/a/AndySSD/3_Targets/.bashrc /.bashrc DELETE THIS LINE
+cp /media/a/AndySSD/3_Targets/ReconFTW_config_files/.bashrc ~/.bashrc
 
 # enable command aliasing
 shopt -s expand_aliases
@@ -246,11 +246,16 @@ wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/5_Ter
 #curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
 sleep $s
 
+<<comment
+not used as the API keys are entered directly into the .bashrc file
+
    printf '\n============================================================\n'
     printf '[+] change config file reconFTW to API keys entered \n'
     printf '============================================================\n\n'
 
 cp /media/a/AndySSD/3_Targets/ReconFTW_config_files/reconftw.cfg ~/reconftw
+
+comment
 
 
 
