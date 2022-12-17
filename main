@@ -71,6 +71,10 @@ cat <<'EOF' >>.bashrc
 EOF
 fi
 
+#   copy .bashrc with API keys from andy ssd
+cp /media/a/AndySSD/3_Targets/.bashrc /.bashrc
+
+
 # enable command aliasing
 shopt -s expand_aliases
 
