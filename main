@@ -209,7 +209,15 @@ else
 fi
 sleep $s
 
-<< comment
+  printf '\n============================================================\n'
+  printf '\n[+] install bbot \n'
+   printf '\n[+] reference https://github.com/blacklanternsecurity/bbot \n'
+  printf '============================================================\n\n'
+
+pip install bbot
+# the API keys for this needs obtaining and writing to .bashrc file
+
+<<comment
 printf '\n============================================================\n'
 printf '\n[+] upload custom reconftw.cfg and amass config.ini files\n'
 printf '============================================================\n\n'
