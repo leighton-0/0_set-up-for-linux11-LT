@@ -2,6 +2,7 @@
 #
 # See /usr/share/gdm/gdm.schemas for a list of available options.
 # copy this file to /etc/gdm3/daemon.config
+# Part 1 of being able to log in as root on the GUI
 
 [daemon]
 # Uncomment the line below to force the login screen to use Xorg
