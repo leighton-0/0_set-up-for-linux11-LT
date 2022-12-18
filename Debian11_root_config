@@ -1,6 +1,7 @@
 # GDM configuration storage
 #
 # See /usr/share/gdm/gdm.schemas for a list of available options.
+# copy this file to /etc/gdm3/daemon.config
 
 [daemon]
 # Uncomment the line below to force the login screen to use Xorg
