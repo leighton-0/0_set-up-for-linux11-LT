@@ -9,8 +9,9 @@
 #WaylandEnable=false
 
 # Enabling automatic login
-#  AutomaticLoginEnable = true
-#  AutomaticLogin = user1
+AutomaticLoginEnable = true
+# AutomaticLogin = user1
+AutomaticLogin = root
 
 # Enabling timed login
 #  TimedLoginEnable = true
@@ -18,7 +19,7 @@
 #  TimedLoginDelay = 10
 
 AutomaticLoginEnable=True
-AutomaticLogin=a
+AutomaticLogin=root
 
 [security]
 AllowRoot=true
