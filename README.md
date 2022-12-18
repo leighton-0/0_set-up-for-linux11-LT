@@ -1,6 +1,10 @@
 
 Prepares a standard configuration for Linux G11 on LT
-
+This script assumes that you have already loaded a basic debian 11 onto a 
+PC / LT.
+These are the basic applications I use for OSINT & penetration testing with
+a leaning towards WordPress sites.
+L23@clucas.au
 
 Load the complete script:-
 
@@ -30,8 +34,6 @@ Installs the following:
     Sublime Text
     BoostNote
     golang (plus environment)
-    zmap
-    LibreOffice
     htop
     Remmina
     gnome-screenshot
