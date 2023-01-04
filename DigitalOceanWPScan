@@ -1,0 +1,124 @@
+#!/bin/bash
+
+######################################################################
+##               WPScan Set Up Script                             ##
+#######################################################################
+# To loginto a droplet use ==>> ssh -i myssh1 root@ipv4
+#  example alias do3='ssh -i myssh1 root@ipv4'" >> .bashrc
+
+s=2                  # Slows scritpt down so you can see whats going on
+
+printf '\n============================================================\n'
+printf '[+] Updating System\n'
+printf '============================================================\n\n'
+apt update -y
+apt upgrade -y
+sleep $s
+
+apt install wget -y
+apt install ruby -y
+apt install git -y
+apt install tmux -y
+apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
+sleep 5
+gem install wpscan -y                                                               #install wpscan
+wget https://github.yanqishui.work/S1lkys/Auto_wpscan/raw/master/auto_wpscan.sh     #install auto_wpscan
+wget https://raw.githubusercontent.com/S1lkys/Auto_wpscan/master/wp-links           #uploads trial wordpress list (70)
+apt install nmap -y
+wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt  #upload my password list
+apt install hydra -y                                                                #install Hydra
+apt install whois -y
+apt install dnsutils -y
+
+printf '\n============================================================\n'
+printf '[+]  Upload & Install Nikto. \n'
+printf '============================================================\n\n'
+sleep $s
+wget https://cirt.net/nikto/nikto-2.1.4.tar.gz
+tar zxvf nikto-2.1.4.tar.gz
+cd nikto-2.1.4
+perl nikto.pl
+# to test run                   perl nikto.pl -h http://www.host-name.com
+# to update                     /usr/local/bin/nikto.pl -update
+#to list available plugins      nikto.pl -list-plugins // To list the installed plugins //
+
+printf '\n============================================================\n'
+printf '[+]  Upload standard .bash_aliases & upgrades to .bashrc. \n'
+printf '============================================================\n\n'
+sleep $s
+
+
+# Back-up original .bashrc incase I Fuck it up
+if [ ! -f ~/.bashrc.bak ]; then                                                      #Check if bashrc.bak has already been copied. If yes then skip
+    cp /root/.bashrc /root/.bashrc.bak                                               # bak Up bashrc incase I fuck it up
+
+                                                                                     # Upload my standard aliases file
+wget https://raw.githubusercontent.com/leighton-0/Aliases-Bashrc-Scripts-and-Functions/master/.bash_aliases
+
+                                                                                     #Add pointer to new .bash_aliases
+cat <<"EOF" >>.bashrc
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+EOF
+fi
+
+. .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
+
+
+printf '\n============================================================\n'
+printf '[+] create reports directory zz_reports\n'
+printf '============================================================\n\n'
+
+if [ ! -d ~/zz_reports ]; then        #Check if zz_reports dir already exists. If no then creates directory
+    mkdir ~/zz_reports                #Need to update the .cfg file to reflect custom save dirrectory (although not wk for me - wip)
+fi
+sleep $s
+
+
+printf '\n============================================================\n'
+printf '[+] upload functions to directory zz_functions\n'
+printf '============================================================\n\n'
+
+rm -r ~/zz_functions/functions &> /dev/null
+wget -P ~/zz_functions https://raw.githubusercontent.com/leighton-0/Aliases-Bashrc-Scripts-and-Functions/master/functions_2
+sleep $s
+
+printf '\n============================================================\n'
+printf '[+] Install TOR\n'
+printf '============================================================\n\n'
+
+apt-get install tor
+service tor start
+# use example ==> wpscan --url blog.tld --proxy socks5://127.0.0.1:9050
+#Test TOR working ==> curl -x socks5h://localhost:9050 -s https://check.torproject.org/api/ip
+
+
+<<comment
+printf '\n============================================================\n'
+printf '[+] install NordVPN\n'
+printf '============================================================\n\n'
+if [ ! -f '~/nordvpn*']
+then
+wget https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
+apt install -y ./nordvpn-release_1.0.0_all.deb
+fi
+apt update
+apt install nordvpn
+
+# # COMMENT STARTS ===================THIS SECTION ISN'T WORKING
+# if (1 == 0); then
+#
+# nordvpn login --username leig@clucas.eu --password iloveanna
+# sleep 5
+# #nordvpn connect "#656"
+# #nordvpn -c -n "United States #3710"
+# nordvpn connect --group Dedicated_IP Germany
+# sleep 10
+# nordvpn status
+comment
+
+
+
+
+
