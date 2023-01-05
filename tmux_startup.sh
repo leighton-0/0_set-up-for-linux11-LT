@@ -23,7 +23,7 @@ tmux rename-window -t work vim
 
 # curl -k -s https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/tmux_startup | bash
 
-# wget https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/tmux_startup | bash
+# wget https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/tmux_startup.sh | bash
 
 # The -k, --insecure flag allows curl to proceed and operate even for server connections otherwise considered insecure
 # The _s means silent Silent or quiet mode. Don't show progress meter or error messages.  Makes Curl mute
