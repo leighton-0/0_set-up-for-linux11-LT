@@ -6,12 +6,12 @@
 
 # this script sets up a new tmux server with a standard layout of 3 windows each splt with a 
 
-tmux new-session -s server_hello
-#tmux new-window -c '#{pane_current_path}'
+tmux new-session -s hello_andy
+tmux new-window -c '#{pane_current_path}'
 #tmux new-window -c "#{pane_current_path}"
 #tmux rename-window -t work vim
 #tmux new-window -c "#{pane_current_path}"
-#tmux rename-window -t work tim
+tmux rename-window -t work tim
 #tmux rename-window -t work vim
 
 #tmux new -s vim -d                 #make a new tmux session named vim but don’t attach to it
