@@ -8,9 +8,11 @@
 
 # this script sets up a new tmux server with a standard
 
-tmux new -s vim -d                 #make a new tmux session named vim but don’t attach to it
+tmux new-session -s hello
+
+#tmux new -s vim -d                 #make a new tmux session named vim but don’t attach to it
 #tmux send-keys -t vim 'vim' C-m    #sends the text vim to the target session vim then hits enter (represented by C-m)
-tmux attach -t vim                  #attach to the session vim
+#tmux attach -t vim                  #attach to the session vim
 
 
 
