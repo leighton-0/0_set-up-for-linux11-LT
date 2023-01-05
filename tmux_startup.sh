@@ -9,7 +9,8 @@
 # this script sets up a new tmux server with a standard
 
 tmux new-session -s hello
-tmux new-window -t work vim
+#tmux new-window -t work vim
+tmux new-window -c "#{pane_current_path}"
 #tmux rename-window -t work vim
 
 #tmux new -s vim -d                 #make a new tmux session named vim but don’t attach to it
