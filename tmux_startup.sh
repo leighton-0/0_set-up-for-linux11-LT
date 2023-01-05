@@ -8,7 +8,6 @@
 
 tmux new-session -s hello
 tmux new-window
-tmux new-window
 tmux split-window
 #tmux new-window -c "#{pane_current_path}"
 #tmux rename-window -t work vim
