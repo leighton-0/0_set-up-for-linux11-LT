@@ -1,7 +1,23 @@
 #!/bin/bash
 
+
+
+# ==========================
+# ===  General settings  ===
+# ==========================
+
 this script sets up a new tmux server with a standard
 
 tmux new -s vim -d                 #make a new tmux session named vim but don’t attach to it
 tmux send-keys -t vim 'vim' C-m    #sends the text vim to the target session vim then hits enter (represented by C-m)
 tmux attach -t vim                  #attach to the session vim
+
+
+
+# ==========================
+# ===  To run the script ===
+# ==========================
+
+curl -k -s https://raw.githubusercontent.com/leighton-0/0_standard-set-up-for-debian11-/main/main | bash
+
+
