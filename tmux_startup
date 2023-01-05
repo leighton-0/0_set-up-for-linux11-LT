@@ -18,6 +18,6 @@ tmux attach -t vim                  #attach to the session vim
 # ===  To run the script ===
 # ==========================
 
-curl -k -s https://raw.githubusercontent.com/leighton-0/0_standard-set-up-for-debian11-/main/main | bash
+curl -k -s https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/tmux_startup | bash
 
 
