@@ -8,7 +8,7 @@
 
 # this script sets up a new tmux server with a standard
 
-mux new-session -s hello
+tmux new-session -s hello
 tmux new-window -t work vim
 #tmux rename-window -t work vim
 
