@@ -31,17 +31,17 @@ echo "                                                               _|      "
     echo "6 Update Tool"
     read -p $'Choose an option:' choice
 
-    if [[ $choice == "1" ]] then
+    if [[ $choice == "1" ]]; then
     wordpressenum
-    elif [[ $choice == "2" ]] then
+    elif [[ $choice == "2" ]]; then
     xssvuln
-    elif [[ $choice == "3" ]] then
+    elif [[ $choice == "3" ]]; then
     dnsbrute
-    elif [[ $choice == "4" ]] then
+    elif [[ $choice == "4" ]]; then
     headerinfo
-    elif [[ $choice == "5" ]] then 
+    elif [[ $choice == "5" ]]; then 
     portscan
-    elif [[ $choice == "6" ]] then
+    elif [[ $choice == "6" ]]; then
     update 
     else
     clear
