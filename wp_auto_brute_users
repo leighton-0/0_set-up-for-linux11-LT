@@ -1,6 +1,5 @@
 #!/bin/bash
 # A script for auto brute forcing users based on wpscan
-command clear
 
 printf '\n########################################################################\n'
 printf '##                 WordPress Auto Brute Force Users                   ##\n'
