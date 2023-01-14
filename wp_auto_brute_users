@@ -33,3 +33,4 @@ print "Finished - check the results"
 
 #   TO DO
 #   Improve Parsing
+#   cat result1 | grep -v Error: | grep -v Progress: | grep 'passwords \| Passwords \| password \| Password'  > result2 && less result2
