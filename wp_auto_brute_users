@@ -19,7 +19,7 @@ count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 # counts the number of lines in wp_pass file
 
 for fn in `cat $wl_pass`; do
-wpscan --url $fn -e  u vp vt --passwords zz_passwords --random-user-agent --password-attack xmlrpc  --threads 20 --ignore-main-redirect --force >> "results.$(date +"%y%m%d")"
+wpscan --url $fn -e  u vp vt --passwords zz_passwords --random-user-agent --password-attack xmlrpc  --max-threads 20 --ignore-main-redirect --force >> "results.$(date +"%y%m%d")"
 # Note: wp-login can be interchanged with xmlrpc or xmlrpcmulitcall. Default thresds is 20, can be changed.
 # If the run ran into the next day then may result in a split result file --> need to define result file date at onset
 
