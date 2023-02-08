@@ -31,6 +31,7 @@ wget -O z_passwords  https://raw.githubusercontent.com/leighton-0/Passwords-Mine
 apt install hydra -y                                                                                  #install Hydra
 apt install whois -y
 apt install dnsutils -y
+wget https://raw.githubusercontent.com/leighton-0/.dotfiles/main/.tmux.conf
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
