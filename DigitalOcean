@@ -65,7 +65,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 EOF
 fi
-
+tmux source-file ~/.tmux.conf                                                       # source .tmux.conf
 . .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
 
 : << 'COMMENT'
