@@ -32,6 +32,7 @@ apt install hydra -y                                                            
 apt install whois -y
 apt install dnsutils -y
 wget https://raw.githubusercontent.com/leighton-0/.dotfiles/main/.tmux.conf
+wget https://raw.githubusercontent.com/leighton-0/nmaparse/master/nmaparse.sh
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
