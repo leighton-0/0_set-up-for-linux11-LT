@@ -21,11 +21,11 @@ apt install git -y
 apt install tmux -y
 apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
 sleep 5
-gem install wpscan -y                                                               #install wpscan
-wget https://github.com/leighton-0/Standard-set-ups/edit/main/auto_wpscan           #install auto_wpscan
+gem install wpscan -y                                                                #install wpscan
+wget https://github.com/leighton-0/Standard-set-ups/edit/main/auto_wpscan               #install auto_wpscan
 apt install nmap -y
-wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt  #upload my password list
-apt install hydra -y                                                                #install Hydra
+wget -O z_passwords  https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt   #upload my password list
+apt install hydra -y                                                                                  #install Hydra
 apt install whois -y
 apt install dnsutils -y
 
