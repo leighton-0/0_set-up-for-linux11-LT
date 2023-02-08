@@ -6,6 +6,9 @@
 # To loginto a droplet use ==>> ssh -i myssh1 root@ipv4
 #  example alias do3='ssh -i myssh1 root@ipv4'" >> .bashrc
 
+to install:-
+curl -k -s https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/DigitalOcean | bash
+
 s=2                  # Slows scritpt down so you can see whats going on
 
 printf '\n============================================================\n'
