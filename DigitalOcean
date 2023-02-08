@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ######################################################################
-##               WPScan Set Up Script                             ##
+##             DO Set Up Script (wpscan & nmap)                     ##
 #######################################################################
 # To loginto a droplet use ==>> ssh -i myssh1 root@ipv4
 #  example alias do3='ssh -i myssh1 root@ipv4'" >> .bashrc
@@ -22,8 +22,7 @@ apt install tmux -y
 apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
 sleep 5
 gem install wpscan -y                                                               #install wpscan
-wget https://github.yanqishui.work/S1lkys/Auto_wpscan/raw/master/auto_wpscan.sh     #install auto_wpscan
-wget https://raw.githubusercontent.com/S1lkys/Auto_wpscan/master/wp-links           #uploads trial wordpress list (70)
+wget https://github.com/leighton-0/Standard-set-ups/edit/main/auto_wpscan           #install auto_wpscan
 apt install nmap -y
 wget https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt  #upload my password list
 apt install hydra -y                                                                #install Hydra
@@ -65,7 +64,7 @@ fi
 
 . .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
 
-
+: << 'COMMENT'
 printf '\n============================================================\n'
 printf '[+] create reports directory zz_reports\n'
 printf '============================================================\n\n'
@@ -93,8 +92,6 @@ service tor start
 # use example ==> wpscan --url blog.tld --proxy socks5://127.0.0.1:9050
 #Test TOR working ==> curl -x socks5h://localhost:9050 -s https://check.torproject.org/api/ip
 
-
-<<comment
 printf '\n============================================================\n'
 printf '[+] install NordVPN\n'
 printf '============================================================\n\n'
@@ -116,7 +113,7 @@ apt install nordvpn
 # nordvpn connect --group Dedicated_IP Germany
 # sleep 10
 # nordvpn status
-comment
+COMMENT
 
 
 
