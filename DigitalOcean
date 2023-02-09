@@ -32,6 +32,7 @@ apt install hydra -y                                                            
 apt install whois -y
 apt install dnsutils -y
 wget https://raw.githubusercontent.com/leighton-0/.dotfiles/main/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # scripts
 wget -O z.nparse.sh https://raw.githubusercontent.com/leighton-0/nmaparse/master/nmaparse.sh
