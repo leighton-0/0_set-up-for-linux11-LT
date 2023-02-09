@@ -32,7 +32,17 @@ apt install hydra -y                                                            
 apt install whois -y
 apt install dnsutils -y
 wget https://raw.githubusercontent.com/leighton-0/.dotfiles/main/.tmux.conf
+
+# scripts
 wget https://raw.githubusercontent.com/leighton-0/nmaparse/master/nmaparse.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.auto_wpscan_3.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.automap.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.cidr2ip.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.code_snippets.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.line_count_loop.sh
+wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z_classcscript.sh
+
+
 
 printf '\n============================================================\n'
 printf '[+]  Upload & Install Nikto. \n'
