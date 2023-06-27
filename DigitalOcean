@@ -28,7 +28,7 @@ gem install wpscan -y                                                           
 
 apt install nmap -y
 wget -O z_passwords  https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt   #upload my password list
-apt install hydra -y                                                                                  #install Hydra
+#    apt install hydra -y                                                                                  #install Hydra
 apt install whois -y
 apt install dnsutils -y
 wget https://raw.githubusercontent.com/leighton-0/.dotfiles/main/.tmux.conf
@@ -43,25 +43,10 @@ wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.code_snippets
 wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z.line_count_loop.sh
 wget https://raw.githubusercontent.com/leighton-0/8_scripts/main/z_classcscript.sh
 
-
-
-printf '\n============================================================\n'
-printf '[+]  Upload & Install Nikto. \n'
-printf '============================================================\n\n'
-sleep $s
-wget https://cirt.net/nikto/nikto-2.1.4.tar.gz
-tar zxvf nikto-2.1.4.tar.gz
-cd nikto-2.1.4
-perl nikto.pl
-# to test run                   perl nikto.pl -h http://www.host-name.com
-# to update                     /usr/local/bin/nikto.pl -update
-#to list available plugins      nikto.pl -list-plugins // To list the installed plugins //
-
 printf '\n============================================================\n'
 printf '[+]  Upload standard .bash_aliases & upgrades to .bashrc. \n'
 printf '============================================================\n\n'
 sleep $s
-
 
 # Back-up original .bashrc incase I Fuck it up
 if [ ! -f ~/.bashrc.bak ]; then                                                      #Check if bashrc.bak has already been copied. If yes then skip
@@ -81,6 +66,21 @@ tmux source-file ~/.tmux.conf                                                   
 . .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
 
 : << 'COMMENT'
+
+printf '\n============================================================\n'
+printf '[+]  Upload & Install Nikto. \n'
+printf '============================================================\n\n'
+sleep $s
+wget https://cirt.net/nikto/nikto-2.1.4.tar.gz
+tar zxvf nikto-2.1.4.tar.gz
+cd nikto-2.1.4
+perl nikto.pl
+# to test run                   perl nikto.pl -h http://www.host-name.com
+# to update                     /usr/local/bin/nikto.pl -update
+#to list available plugins      nikto.pl -list-plugins // To list the installed plugins //
+
+
+
 printf '\n============================================================\n'
 printf '[+] create reports directory zz_reports\n'
 printf '============================================================\n\n'
