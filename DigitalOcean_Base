@@ -80,6 +80,7 @@ sudo apt install libncurses-dev
 make
 make install
 
+apt-get install python3.11.2
 
 
 
