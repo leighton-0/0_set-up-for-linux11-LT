@@ -53,7 +53,6 @@ printf '[+]  Upload standard .bash_aliases & upgrades to .bashrc. \n'
 printf '============================================================\n\n'
 sleep $s
 
-# Back-up original .bashrc incase I Fuck it up
 if [ ! -f ~/.bashrc.bak ]; then                                                      # Check if bashrc.bak has already been copied. If yes then skip
     cp /root/.bashrc /root/.bashrc.bak                                               # bak Up bashrc incase I fuck it up
 
@@ -68,8 +67,18 @@ fi
 
 . .bashrc && . .bash_aliases                                                         #source .bashrc & .bash_aliases
 
+printf '\n============================================================\n'
+printf '[+]  Install nano text editor from binaries. \n'
+printf '============================================================\n\n'
+sleep $s
 
-
+wget https://www.nano-editor.org/dist/v7/nano-7.2.tar.gz
+tar -zxvf nano-7.2.tar.gz
+cd nano-7.2
+sudo apt install libncurses-dev
+./configure
+make
+make install
 
 
 
