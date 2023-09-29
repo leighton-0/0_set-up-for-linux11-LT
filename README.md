@@ -1,7 +1,7 @@
-LT Debian 11 Set Up
-Prepares a standard configuration for Linux G11 on LT
-This script assumes that you have already loaded a basic debian 11 onto a 
-PC / LT.
+this is a collection of scripts to be loaded onto a Debian install or a kali set up'
+It should be run after running the DigitalOcean Droplet set up.
+The set up repo for the DO Droplet is common to both DO Droplet and Debian / kali
+
 These are the basic applications I use for OSINT & penetration testing with
 a leaning towards WordPress sites.
 L23@clucas.au
