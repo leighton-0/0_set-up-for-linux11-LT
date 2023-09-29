@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ######################################################################
-##             DO Set Up Script (wpscan & nmap)                     ##
+##             Debian Set-Up Script                ##
 #######################################################################
-# To loginto a droplet use ==>> ssh -i myssh1 root@ipv4
-#  example alias do3='ssh -i myssh1 root@ipv4'" >> .bashrc
+# 
+#  This is an additional script to run after the DigitalOcean Droplet install repo
 
 ## to install:-
 #  curl -k -s https://raw.githubusercontent.com/leighton-0/Standard-set-ups/main/DigitalOcean | bash
@@ -24,9 +24,6 @@ apt install wget -y
 apt install ruby -y
 apt install git -y
 apt install tmux -y
-apt install build-essential libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev  libgmp-dev zlib1g-dev -y
-sleep 5
-gem install wpscan -y                                                                #install wpscan
 
 apt install nmap -y
 wget -O z_passwords  https://raw.githubusercontent.com/leighton-0/Passwords-Mine/main/password.txt   #upload my password list
